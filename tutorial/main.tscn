@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://bujb6yf0mg474"]
+
+[ext_resource type="Texture2D" uid="uid://cgpuv2tx6rvhh" path="res://icon.svg" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cixhxofee1jne" path="res://color_rect.tscn" id="2_h2yge"]
+
+[node name="Node2D" type="Node2D" unique_id=1954504939]
+position = Vector2(331, 247)
+scale = Vector2(2.1421752, 2.1421752)
+
+[node name="Evil" type="Sprite2D" parent="." unique_id=1031514491]
+modulate = Color(0.7171348, 0, 0.094041266, 1)
+position = Vector2(199.75604, 104.60746)
+scale = Vector2(0.6206277, 0.6206277)
+texture = ExtResource("1_0xm2m")
+
+[node name="Nice" type="Sprite2D" parent="." unique_id=495826848]
+modulate = Color(0, 0.65405136, 0.4792093, 1)
+position = Vector2(300.16217, 104.60746)
+scale = Vector2(0.6206277, 0.6206277)
+texture = ExtResource("1_0xm2m")
+
+[node name="SpriteGodot" type="Sprite2D" parent="." unique_id=698215817]
+position = Vector2(300.16217, 8.402664)
+scale = Vector2(0.6206277, 0.6206277)
+texture = ExtResource("1_0xm2m")
+
+[node name="tree" parent="." unique_id=1214356428 instance=ExtResource("2_h2yge")]
+offset_left = 11.0
+offset_top = 1.9999999
+offset_right = 142.0
+offset_bottom = 71.0
+scale = Vector2(0.4980916, 0.4980916)
+metadata/_edit_use_anchors_ = true
+
+[node name="tree6" parent="." unique_id=1321630512 instance=ExtResource("2_h2yge")]
+offset_left = -66.0
+offset_top = -49.0
+offset_right = 65.0
+offset_bottom = 20.0
+scale = Vector2(0.4980916, 0.4980916)
+metadata/_edit_use_anchors_ = true
+
+[node name="tree7" parent="." unique_id=1060358374 instance=ExtResource("2_h2yge")]
+offset_left = 3.0000153
+offset_top = -97.0
+offset_right = 134.00002
+offset_bottom = -28.0
+scale = Vector2(0.4980916, 0.4980916)
+metadata/_edit_use_anchors_ = true
+
+[node name="tree8" parent="." unique_id=1407712940 instance=ExtResource("2_h2yge")]
+offset_left = 172.00002
+offset_top = -63.999996
+offset_right = 303.0
+offset_bottom = 5.000004
+scale = Vector2(0.4980916, 0.4980916)
+metadata/_edit_use_anchors_ = true
+
+[node name="tree2" parent="." unique_id=992887016 instance=ExtResource("2_h2yge")]
+offset_left = 29.000002
+offset_top = 96.00001
+offset_right = 160.0
+offset_bottom = 165.0
+scale = Vector2(0.4980916, 0.4980916)
+metadata/_edit_use_anchors_ = true
+
+[node name="tree3" parent="." unique_id=1311458622 instance=ExtResource("2_h2yge")]
+offset_left = -58.000008
+offset_top = 67.00001
+offset_right = 72.99999
+offset_bottom = 136.0
+scale = Vector2(0.4980916, 0.4980916)
+metadata/_edit_use_anchors_ = true
+
+[node name="tree4" parent="." unique_id=1990910621 instance=ExtResource("2_h2yge")]
+modulate = Color(0.697747, 0.075776525, 0.49007744, 1)
+offset_left = 73.00001
+offset_top = -57.000008
+offset_right = 204.0
+offset_bottom = 11.999992
+scale = Vector2(0.4980916, 0.4980916)
+metadata/_edit_use_anchors_ = true
+
+[node name="tree5" parent="." unique_id=1258533537 instance=ExtResource("2_h2yge")]
+offset_left = 87.00001
+offset_top = 36.000008
+offset_right = 218.0
+offset_bottom = 105.00001
+scale = Vector2(0.4980916, 0.4980916)
+metadata/_edit_use_anchors_ = true
