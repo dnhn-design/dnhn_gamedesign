@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cgpuv2tx6rvhh" path="res://icon.svg" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://cixhxofee1jne" path="res://color_rect.tscn" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://3olhkem0qt85" path="res://toppng.com-oomba-8-bit-goomba-593x593.png" id="3_h2yge"]
 
 [node name="Node2D" type="Node2D" unique_id=1954504939]
 position = Vector2(331, 247)
@@ -88,3 +89,14 @@ offset_right = 218.0
 offset_bottom = 105.00001
 scale = Vector2(0.4980916, 0.4980916)
 metadata/_edit_use_anchors_ = true
+
+[node name="Toppng_comOomba8BitGoomba593x593" type="Sprite2D" parent="." unique_id=824319098]
+position = Vector2(-102.23253, 134.05956)
+scale = Vector2(0.0760322, 0.0760322)
+texture = ExtResource("3_h2yge")
+
+[node name="Toppng_comOomba8BitGoomba593x594" type="Sprite2D" parent="." unique_id=1560576139]
+modulate = Color(0.30099404, 0.45323157, 0.80766445, 1)
+position = Vector2(-102.23253, 53.216927)
+scale = Vector2(0.0760322, 0.0760322)
+texture = ExtResource("3_h2yge")
