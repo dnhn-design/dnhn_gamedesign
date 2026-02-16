@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ch66do4p1wfhg"]
+
+[ext_resource type="Texture2D" uid="uid://2uyaco1osep5" path="res://icon.svg" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://d1yndyrdvdu0k" path="res://icon.gd" id="2_0xm2m"]
+
+[node name="Node2D" type="Node2D" unique_id=52350120]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1684057496]
+position = Vector2(80, 80)
+texture = ExtResource("1_ig7tw")
+script = ExtResource("2_0xm2m")
+robot_name = "drew"

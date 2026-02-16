@@ -97,6 +97,6 @@ texture = ExtResource("3_h2yge")
 
 [node name="Toppng_comOomba8BitGoomba593x594" type="Sprite2D" parent="." unique_id=1560576139]
 modulate = Color(0.30099404, 0.45323157, 0.80766445, 1)
-position = Vector2(-102.23253, 53.216927)
+position = Vector2(-107.3675, 52.750126)
 scale = Vector2(0.0760322, 0.0760322)
 texture = ExtResource("3_h2yge")
