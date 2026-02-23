@@ -9,4 +9,5 @@
 position = Vector2(80, 80)
 texture = ExtResource("1_ig7tw")
 script = ExtResource("2_0xm2m")
+speed = 2
 robot_name = "drew"

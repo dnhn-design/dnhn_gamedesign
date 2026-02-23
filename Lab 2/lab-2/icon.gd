@@ -13,18 +13,33 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:	
+	#4-directional movement
 	if Input.is_action_pressed("ui_up"):
 		position.y -= speed
-		rotation += 1
+		rotation_degrees += 5
 	elif Input.is_action_pressed("ui_down"):
 		position.y += speed
-		rotation -= 1
+		rotation_degrees -= 5
 	elif Input.is_action_pressed("ui_left"):
 		position.x -= speed
-		rotation += 1
+		rotation_degrees -= 5
 	elif Input.is_action_pressed("ui_right"):
 		position.x += speed
-		rotation += 1
+		rotation_degrees += 5
+	
+	#8-directional movement (diagonal too)
+	if Input.is_action_pressed("ui_up") && Input.is_action_pressed("ui_right"):
+		position.x += speed/2
+		position.y -= speed/2
+	elif Input.is_action_pressed("ui_up") && Input.is_action_pressed("ui_left"):
+		position.y -= speed/2
+		position.x -= speed/2
+	elif Input.is_action_pressed("ui_down") && Input.is_action_pressed("ui_right"):
+		position.y += speed/2
+		position.x += speed/2
+	elif Input.is_action_pressed("ui_down") && Input.is_action_pressed("ui_left"):
+		position.y += speed/2
+		position.x -= speed/2
 
 #func _input(event: InputEvent) -> void:
 	#print(event)
