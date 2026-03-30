@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://diuphwcbs72e1"]
 
-[ext_resource type="Script" uid="uid://bcsdjpcrg8s58" path="res://character_body_3d.gd" id="1_fu8xi"]
-[ext_resource type="Script" uid="uid://cyi0eisio2lta" path="res://script/kill.gd" id="2_qe561"]
+[ext_resource type="Script" uid="uid://bcsdjpcrg8s58" path="res://script/character_body_3d.gd" id="1_eete0"]
+[ext_resource type="Script" uid="uid://cyi0eisio2lta" path="res://script/kill.gd" id="2_0cfwr"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_eete0"]
 radius = 1.3061826
@@ -27,7 +27,7 @@ light_color = Color(0.9175455, 0.33078676, 0.60072666, 1)
 light_energy = 7.02
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1940935894]
-script = ExtResource("1_fu8xi")
+script = ExtResource("1_eete0")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="CharacterBody3D" unique_id=1532422649]
 transform = Transform3D(0.9210971, 0, -0.38933295, 0, 1, 0, 0.38933295, 0, 0.9210971, 2, 0, 0)
@@ -88,7 +88,7 @@ size = Vector3(1, 9, 40.07379)
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1735083741]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15.063631, 0)
-script = ExtResource("2_qe561")
+script = ExtResource("2_0cfwr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1432996602]
 shape = SubResource("WorldBoundaryShape3D_mjsbv")
