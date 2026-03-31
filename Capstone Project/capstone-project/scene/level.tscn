@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bpxv5tabmop6s"]
+
+[ext_resource type="Script" uid="uid://5h63r00ytm8i" path="res://scripts/level.gd" id="1_36wlx"]
+[ext_resource type="Script" uid="uid://f5fqx7so4ixv" path="res://scripts/player_1.gd" id="2_7g0b6"]
+[ext_resource type="Texture2D" uid="uid://bdqq72rdiib14" path="res://assets/icon.svg" id="2_dmi07"]
+[ext_resource type="Script" uid="uid://bkp34qmy17fqv" path="res://scripts/player_2.gd" id="4_7g0b6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7g0b6"]
+radius = 64.070274
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ukt71"]
+size = Vector2(40, 40)
+
+[node name="Level" type="Node2D" unique_id=948181518]
+script = ExtResource("1_36wlx")
+
+[node name="Player 1" type="CharacterBody2D" parent="." unique_id=1335893619]
+script = ExtResource("2_7g0b6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player 1" unique_id=942177862]
+texture = ExtResource("2_dmi07")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player 1" unique_id=98477585]
+shape = SubResource("CircleShape2D_7g0b6")
+
+[node name="Player 2" type="CharacterBody2D" parent="." unique_id=1383712327]
+position = Vector2(-304, -206)
+script = ExtResource("4_7g0b6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player 2" unique_id=779802807]
+texture = ExtResource("2_dmi07")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player 2" unique_id=664519417]
+shape = SubResource("CircleShape2D_7g0b6")
+
+[node name="String" type="Line2D" parent="." unique_id=392931347]
+
+[node name="obstacle" type="Node" parent="." unique_id=928274413]
+
+[node name="Obstacle3" type="StaticBody2D" parent="obstacle" unique_id=1849290049]
+position = Vector2(-226, 61)
+
+[node name="ColorRect" type="ColorRect" parent="obstacle/Obstacle3" unique_id=237568246]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstacle/Obstacle3" unique_id=593925100]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_ukt71")
+
+[node name="Obstacle2" type="StaticBody2D" parent="obstacle" unique_id=41199623]
+position = Vector2(132, 42)
+
+[node name="ColorRect" type="ColorRect" parent="obstacle/Obstacle2" unique_id=2138064907]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstacle/Obstacle2" unique_id=1262789833]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_ukt71")
+
+[node name="Obstacle" type="StaticBody2D" parent="obstacle" unique_id=1284521921]
+position = Vector2(-452, 122)
+
+[node name="ColorRect" type="ColorRect" parent="obstacle/Obstacle" unique_id=1036750216]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstacle/Obstacle" unique_id=2082619025]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_ukt71")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1461202843]
