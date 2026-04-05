@@ -4,8 +4,6 @@ extends Node2D
 @onready var p2 = $"Player 2"
 @onready var string: Line2D = $String
 
-
-
 var active_color = Color(0.203, 0.289, 1.0, 1.0)      # Normal/Bright
 var inactive_color = Color(0.3, 0.3, 0.3, 1) # Dark/Greyed out
 var active_player # This tracks who is currently moving
