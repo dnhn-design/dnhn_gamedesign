@@ -1,0 +1,174 @@
+[gd_scene format=3 uid="uid://d35liiovf2p5e"]
+
+[ext_resource type="Texture2D" uid="uid://dls8x6ot6gm2o" path="res://Assets/sprites/knight.png" id="1_bhpww"]
+[ext_resource type="Script" uid="uid://dc5bjkmv2xp7y" path="res://Scripts/end_screen.gd" id="1_gdxnu"]
+[ext_resource type="Texture2D" uid="uid://cwvfe4xer53fs" path="res://Assets/sprites/Animated Chicken Sprite Sheet.png" id="2_gdxnu"]
+[ext_resource type="FontFile" uid="uid://biv07sdgshnw6" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="3_8yanq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oauki"]
+atlas = ExtResource("1_bhpww")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_biidh"]
+atlas = ExtResource("1_bhpww")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtlm0"]
+atlas = ExtResource("1_bhpww")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxprx"]
+atlas = ExtResource("1_bhpww")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fi2y0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oauki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_biidh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtlm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxprx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpuqj"]
+atlas = ExtResource("2_gdxnu")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlxvy"]
+atlas = ExtResource("2_gdxnu")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_em7vc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bpuqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlxvy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4suit"]
+font = ExtResource("3_8yanq")
+font_size = 56
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqrt5"]
+bg_color = Color(0.8235294, 0.1254902, 0.1764706, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+expand_margin_left = 30.0
+expand_margin_right = 30.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p36t0"]
+bg_color = Color(0.1938054, 0, 0.045214936, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+expand_margin_left = 30.0
+expand_margin_right = 30.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhupi"]
+bg_color = Color(0.5289719, 0, 0.18201411, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+expand_margin_left = 30.0
+expand_margin_right = 30.0
+
+[node name="End" type="Control" unique_id=627888900]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gdxnu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=378471116]
+layout_mode = 0
+offset_left = -35.0
+offset_top = -27.0
+offset_right = 1189.0
+offset_bottom = 678.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=986599180]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=227869397]
+position = Vector2(35, 421)
+scale = Vector2(11.5, 11.5)
+sprite_frames = SubResource("SpriteFrames_fi2y0")
+autoplay = "default"
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="." unique_id=416122973]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2" unique_id=1434444758]
+position = Vector2(1113, 475.75)
+scale = Vector2(6.3593745, 6.3593745)
+sprite_frames = SubResource("SpriteFrames_em7vc")
+autoplay = "default"
+
+[node name="Label" type="Label" parent="." unique_id=171879821]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -399.0
+offset_top = -197.0
+offset_right = 399.0
+offset_bottom = -82.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "40 coins
+collected!
+
+Great Job!"
+label_settings = SubResource("LabelSettings_4suit")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=576512427]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.612915
+offset_top = 76.0
+offset_right = 87.612915
+offset_bottom = 173.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_8yanq")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_wqrt5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p36t0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xhupi")
+text = "RETURN TO START"
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://ct4pmyl0iv372"]
+
+[ext_resource type="Script" uid="uid://cdnsbajha43dp" path="res://Scripts/chicken_p_2.gd" id="1_coeoh"]
+[ext_resource type="Texture2D" uid="uid://cwvfe4xer53fs" path="res://Assets/sprites/Animated Chicken Sprite Sheet.png" id="1_myt7w"]
+[ext_resource type="Script" uid="uid://caonmv8mc0j2p" path="res://Scripts/animated_chicken.gd" id="3_nh46a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nh46a"]
+atlas = ExtResource("1_myt7w")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2eilt"]
+atlas = ExtResource("1_myt7w")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gf3y"]
+atlas = ExtResource("1_myt7w")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hekfe"]
+atlas = ExtResource("1_myt7w")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrso3"]
+atlas = ExtResource("1_myt7w")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3mmq"]
+atlas = ExtResource("1_myt7w")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_coeoh"]
+atlas = ExtResource("1_myt7w")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ad1mx"]
+atlas = ExtResource("1_myt7w")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pybf"]
+atlas = ExtResource("1_myt7w")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_828ce"]
+atlas = ExtResource("1_myt7w")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd772"]
+atlas = ExtResource("1_myt7w")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hekfe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nh46a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2eilt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gf3y")
+}],
+"loop": false,
+"name": &"down",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hekfe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrso3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3mmq")
+}],
+"loop": true,
+"name": &"down_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_coeoh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gf3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2eilt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nh46a")
+}],
+"loop": false,
+"name": &"up",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ad1mx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5pybf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_828ce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qd772")
+}],
+"loop": true,
+"name": &"up_walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_myt7w"]
+radius = 7.0
+height = 14.0
+
+[node name="chicken_p2" type="CharacterBody2D" unique_id=1679312608]
+scale = Vector2(0.7442523, 0.7442523)
+script = ExtResource("1_coeoh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=333794683]
+position = Vector2(-4.7683716e-07, -6)
+scale = Vector2(0.49999997, 0.49999997)
+sprite_frames = SubResource("SpriteFrames_hekfe")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.53835845
+flip_h = true
+script = ExtResource("3_nh46a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=609933528]
+position = Vector2(0, -7)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_myt7w")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=817268976]
+offset_left = -3.0
+offset_top = -28.0
+offset_right = 2.0
+offset_bottom = -23.0
+
+[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
