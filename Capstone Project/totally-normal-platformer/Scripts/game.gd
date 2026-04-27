@@ -2,6 +2,7 @@ extends Node2D
 @onready var p1: CharacterBody2D = $Player
 @onready var p2: CharacterBody2D = $chicken_p2
 @onready var string: Line2D = $Line2D
+@onready var coin_tutorial: Label = $coin_tutorial
 
 var was_at_limit = false
 var active_color = Color(0.765, 0.0, 0.361, 1.0)
@@ -12,8 +13,14 @@ var line_normal_color = Color(1, 1, 1, 1)
 var line_max_color = Color(0.765, 0.0, 0.361, 1.0)
 
 func _ready():
-	active_player = p1 
+	if Global.p1_active == true:
+		active_player = p1 
+	if Global.p2_active == true:
+		active_player = p2
 	update_player_visuals()
+	
+	if Input.is_action_just_pressed("right"):
+		coin_tutorial.show()
 
 func _process(_delta):
 	# Update the line visual
@@ -57,7 +64,7 @@ func update_player_visuals():
 	if active_player == p1:
 		s1.modulate = active_color
 		s2.modulate = inactive_color
-	else:
+	if active_player == p2:
 		s1.modulate = inactive_color
 		s2.modulate = active_color
 

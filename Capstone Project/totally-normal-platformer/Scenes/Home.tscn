@@ -5,6 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://cwvfe4xer53fs" path="res://Assets/sprites/Animated Chicken Sprite Sheet.png" id="2_biidh"]
 [ext_resource type="FontFile" uid="uid://biv07sdgshnw6" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="3_vtlm0"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_dgjnp"]
+font = ExtResource("3_vtlm0")
+font_size = 56
+font_color = Color(0, 0, 0, 1)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_oauki"]
 atlas = ExtResource("1_3wroe")
 region = Rect2(0, 0, 32, 32)
@@ -63,11 +68,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="LabelSettings" id="LabelSettings_dgjnp"]
-font = ExtResource("3_vtlm0")
-font_size = 56
-font_color = Color(0, 0, 0, 1)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yx0ix"]
 bg_color = Color(0.8235294, 0.1254902, 0.1764706, 1)
 corner_radius_top_left = 20
@@ -108,16 +108,38 @@ grow_vertical = 2
 script = ExtResource("1_vtlm0")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1223927884]
-layout_mode = 0
-offset_left = -35.0
-offset_top = -27.0
-offset_right = 1189.0
-offset_bottom = 678.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=288957026]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "
+
+Totally Normal
+Platformer Game
+
+
+
+
+By Donghoon Yi"
+label_settings = SubResource("LabelSettings_dgjnp")
+horizontal_alignment = 1
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1713014040]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1150687451]
-position = Vector2(233, 421)
+position = Vector2(132, 421)
 scale = Vector2(11.5, 11.5)
 sprite_frames = SubResource("SpriteFrames_bpuqj")
 autoplay = "default"
@@ -127,30 +149,12 @@ frame_progress = 0.68253946
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="." unique_id=53918724]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D2" unique_id=1583703270]
-position = Vector2(933.00006, 475.75)
+position = Vector2(1019, 475.75)
 scale = Vector2(6.3593745, 6.3593745)
 sprite_frames = SubResource("SpriteFrames_rh52w")
 autoplay = "default"
 frame = 1
 frame_progress = 0.4564039
-
-[node name="Label" type="Label" parent="." unique_id=288957026]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -399.0
-offset_top = -197.0
-offset_right = 399.0
-offset_bottom = -82.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Totally Normal
-Platformer Game"
-label_settings = SubResource("LabelSettings_dgjnp")
-horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=1514921961]
 layout_mode = 1
@@ -159,10 +163,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -87.612915
-offset_top = 76.0
-offset_right = 87.612915
-offset_bottom = 173.0
+offset_left = -90.0
+offset_top = -48.5
+offset_right = 90.0
+offset_bottom = 48.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
