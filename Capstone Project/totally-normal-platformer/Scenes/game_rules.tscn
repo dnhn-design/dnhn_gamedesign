@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dn4w3vdhlg6rt"]
+
+[ext_resource type="Script" uid="uid://d2ljjq0r5ldfp" path="res://Scripts/game_rules.gd" id="1_23uo8"]
+[ext_resource type="FontFile" uid="uid://biv07sdgshnw6" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="1_ksjgk"]
+
+[node name="Control" type="Control" unique_id=292986728]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_23uo8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1752560546]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=891781194]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.99932635, 1.0015827)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_ksjgk")
+theme_override_font_sizes/font_size = 36
+text = "* Rules *
+
+Collect 50 coins.
+
+The Knight and 
+the Chicken cannot be
+too far apart.
+
+Chicken can crouch 
+to fit into tight gaps...
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorRect" unique_id=2061503092]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.99932635, 1)
+theme_override_colors/font_color = Color(1, 0.8666667, 0, 1)
+theme_override_fonts/font = ExtResource("1_ksjgk")
+theme_override_font_sizes/font_size = 24
+text = "Press Space or Enter to Continue...
+
+
+"
+horizontal_alignment = 1
