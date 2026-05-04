@@ -5,6 +5,7 @@ extends Node2D
 @onready var coin_tutorial: Label = $coin_tutorial
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var life_counter: Label = $CanvasLayer/MarginContainer/Life_counter
+@onready var return_title: Button = $CanvasLayer/MarginContainer/Button
 
 
 var was_at_limit = false
@@ -79,3 +80,7 @@ func update_player_visuals():
 func get_other_player(current):
 	if current == p1: return p2
 	return p1
+
+
+func _on_button_button_up() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Home.tscn")

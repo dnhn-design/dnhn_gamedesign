@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Global="*uid://c6hy34uqwx1fp"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 swap={

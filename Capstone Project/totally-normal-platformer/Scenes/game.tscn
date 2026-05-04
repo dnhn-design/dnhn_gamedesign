@@ -200,6 +200,39 @@ font_color = Color(1, 1, 0, 1)
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rku1e"]
+bg_color = Color(0.8235294, 0.1254902, 0.1764706, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfjv2"]
+bg_color = Color(0.1938054, 0, 0.045214936, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1phco"]
+bg_color = Color(0.5289719, 0, 0.18201411, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
 [sub_resource type="LabelSettings" id="LabelSettings_rku1e"]
 font = ExtResource("9_h4fw4")
 font_size = 24
@@ -354,7 +387,7 @@ offset_top = -29.0
 offset_right = -97.0
 offset_bottom = -8.0
 text = "The chicken 
-can crouch (↓)!"
+can crouch!"
 label_settings = SubResource("LabelSettings_ldgsr")
 
 [node name="tutorial2" type="Label" parent="." unique_id=1213413962]
@@ -407,6 +440,19 @@ grow_vertical = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Button" type="Button" parent="CanvasLayer/MarginContainer" unique_id=1209547978]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_h4fw4")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_rku1e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rfjv2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1phco")
+text = "RETURN TO TITLE"
 
 [node name="Life_counter" type="Label" parent="CanvasLayer/MarginContainer" unique_id=917580030]
 layout_mode = 2
@@ -727,3 +773,5 @@ the slime! :)
 He might teach 
 you some tricks"
 label_settings = SubResource("LabelSettings_rfjv2")
+
+[connection signal="button_up" from="CanvasLayer/MarginContainer/Button" to="." method="_on_button_button_up"]
