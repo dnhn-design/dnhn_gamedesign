@@ -32,7 +32,10 @@ func _ready():
 func _process(_delta):
 	
 	# Update the line visual
-	string.points = PackedVector2Array([p1.position - Vector2(0,5), p2.position - Vector2(0,5)])
+	string.points = PackedVector2Array([p1.position - Vector2(5,5), p2.position - Vector2(5,5)])
+	var rope_shape = $RopeArea/CollisionShape2D.shape
+	rope_shape.a = p1.position
+	rope_shape.b = p2.position
 	
 	# Swap
 	if Input.is_action_just_pressed("swap"):

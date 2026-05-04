@@ -1,5 +1,5 @@
 extends Area2D
-@onready var coin_counter: Label = $"../../CanvasLayer/MarginContainer/Coin_counter"
+@onready var coin_counter: Label = $"../../CanvasLayer/MarginContainer/VBoxContainer/Coin_counter"
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 
@@ -13,4 +13,6 @@ func _on_body_entered(body: Node2D) -> void:
 	queue_free()
 	
 	if Global.coin == 67:
-		get_tree().change_scene_to_file("res://Scenes/end_screen.tscn")
+		Global.coin_met = true
+		if Global.coin_met == true and Global.red_met == true:
+			get_tree().change_scene_to_file("res://Scenes/end_screen.tscn")
