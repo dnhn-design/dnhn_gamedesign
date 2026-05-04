@@ -1,4 +1,6 @@
 extends CharacterBody2D
+@onready var jump_sfx: AudioStreamPlayer = $"../jump_sfx"
+@onready var misc_sfx: AudioStreamPlayer = $"../misc_sfx"
 
 
 const SPEED = 90.0
@@ -22,6 +24,7 @@ func _physics_process(delta: float) -> void:
 		# As good practice, you should replace UI actions with custom gameplay actions.
 		if Input.is_action_just_pressed("jump") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
+			jump_sfx.play()
 			
 		var direction := Input.get_axis("left", "right")
 		velocity.x = direction * SPEED
@@ -32,8 +35,9 @@ func _physics_process(delta: float) -> void:
 		#else:
 			#velocity.x = move_toward(velocity.x, 0, SPEED)
 
-		if Input.is_action_pressed("down"):
+		if Input.is_action_just_pressed("down"):
 			JUMP_VELOCITY = -130.0
+			misc_sfx.play()
 			$AnimatedSprite2D.play("down_walk")
 		if Input.is_action_pressed("up"):
 			JUMP_VELOCITY = -200.0

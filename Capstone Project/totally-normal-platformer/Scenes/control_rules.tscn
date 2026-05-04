@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://biv07sdgshnw6" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="1_681lw"]
 [ext_resource type="Script" uid="uid://dvtc3lcokvc6p" path="res://Scripts/control_rules.gd" id="1_e42qa"]
+[ext_resource type="AudioStream" uid="uid://bsmu2surweelj" path="res://Assets/music/time_for_adventure.mp3" id="3_jd2at"]
 
 [node name="Control" type="Control" unique_id=1088515186]
 layout_mode = 3
@@ -66,3 +67,8 @@ text = "Press Space or Enter to Continue...
 
 "
 horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=787018232]
+stream = ExtResource("3_jd2at")
+volume_db = -20.0
+pitch_scale = 0.6

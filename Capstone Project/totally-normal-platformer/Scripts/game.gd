@@ -3,6 +3,9 @@ extends Node2D
 @onready var p2: CharacterBody2D = $chicken_p2
 @onready var string: Line2D = $Line2D
 @onready var coin_tutorial: Label = $coin_tutorial
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+@onready var life_counter: Label = $CanvasLayer/MarginContainer/Life_counter
+
 
 var was_at_limit = false
 var active_color = Color(0.765, 0.0, 0.361, 1.0)
@@ -13,6 +16,9 @@ var line_normal_color = Color(1, 1, 1, 1)
 var line_max_color = Color(0.765, 0.0, 0.361, 1.0)
 
 func _ready():
+	audio_stream_player.play()
+	life_counter.text = "Life: " + str(Global.life)
+	
 	if Global.p1_active == true:
 		active_player = p1 
 	if Global.p2_active == true:
@@ -23,6 +29,7 @@ func _ready():
 		coin_tutorial.show()
 
 func _process(_delta):
+	
 	# Update the line visual
 	string.points = PackedVector2Array([p1.position - Vector2(0,5), p2.position - Vector2(0,5)])
 	

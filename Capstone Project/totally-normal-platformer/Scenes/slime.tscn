@@ -3,6 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://1cyqsw5g31wx" path="res://Assets/sprites/slime_green.png" id="1_swwnm"]
 [ext_resource type="PackedScene" uid="uid://ioh2vd6td2cq" path="res://Scenes/killzone.tscn" id="2_aiwxb"]
 
+[sub_resource type="Gradient" id="Gradient_swwnm"]
+offsets = PackedFloat32Array(0, 0.28915662, 0.4698795)
+colors = PackedColorArray(1, 0.110000014, 0.110000014, 1, 1, 0.029999971, 0.029999971, 0.19215687, 1, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_aiwxb"]
+gradient = SubResource("Gradient_swwnm")
+fill = 1
+fill_from = Vector2(0.5195652, 0.5043478)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_paq7w"]
 atlas = ExtResource("1_swwnm")
 region = Rect2(0, 24, 24, 24)
@@ -43,6 +52,13 @@ animations = [{
 size = Vector2(10, 13)
 
 [node name="slime" type="Node2D" unique_id=756544996]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=285001382]
+offset_left = -33.0
+offset_top = -38.0
+offset_right = 31.0
+offset_bottom = 26.0
+texture = SubResource("GradientTexture2D_aiwxb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=953996809]
 position = Vector2(0, -12)

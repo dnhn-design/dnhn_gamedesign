@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d2ljjq0r5ldfp" path="res://Scripts/game_rules.gd" id="1_23uo8"]
 [ext_resource type="FontFile" uid="uid://biv07sdgshnw6" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="1_ksjgk"]
+[ext_resource type="AudioStream" uid="uid://bsmu2surweelj" path="res://Assets/music/time_for_adventure.mp3" id="3_75cba"]
 
 [node name="Control" type="Control" unique_id=292986728]
 layout_mode = 3
@@ -37,7 +38,7 @@ theme_override_fonts/font = ExtResource("1_ksjgk")
 theme_override_font_sizes/font_size = 36
 text = "* Rules *
 
-Collect 50 coins.
+Collect 67 coins.
 
 The Knight and 
 the Chicken cannot be
@@ -66,3 +67,8 @@ text = "Press Space or Enter to Continue...
 
 "
 horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=52991049]
+stream = ExtResource("3_75cba")
+volume_db = -20.0
+pitch_scale = 0.4
